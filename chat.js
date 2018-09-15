@@ -13,14 +13,6 @@ app.get('/',function(req,res) {
 	res.send("The server Is Running")
 })
 
-console.log('=========================='.red)
-console.log('=                        ='.red)
-console.log('=      '.red+'Chat Server'.green.bold+'       ='.red)
-console.log('=                        ='.red)
-console.log('=========================='.red)
-console.log('='.red+'   192.168.8.100'.cyan.bold+':'+port.toString().green.bold+'   ='.red)
-console.log('=========================='.red)
-
 io.on("connection", function(socket) {
 
 	io.sockets.emit("SavedMensages",mensages)  // envia el array de los mensajes guardados
